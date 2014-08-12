@@ -1,5 +1,5 @@
-Name         : kf5-knotifyconfig
-Version      : 5.0.0
+Name         : knotifyconfig
+Version      : 5.1.0
 Release      : 1
 Group        : System/Base
 License      : LGPL2
@@ -25,11 +25,11 @@ PkgBR:
     - kf5-rpm-macros
     - extra-cmake-modules
     - qt5-tools
-    - kf5-kcompletion-devel
-    - kf5-kconfig-devel
-    - kf5-ki18n-devel
-    - kf5-kio-devel
-    - kf5-kservice-devel
+    - kcompletion-devel
+    - kconfig-devel
+    - ki18n-devel
+    - kio-devel
+    - kservice-devel
     - phonon-qt5-devel
 PkgConfigBR:
     - Qt5Core
@@ -61,14 +61,14 @@ SubPackages:
         The %{name}-devel package contains the files necessary to develop applications
         that use %{name}.
       Requires:
-          - kf5-kcompletion-devel
-          - kf5-kconfig-devel
-          - kf5-ki18n-devel
-          - kf5-kio-devel
-          - kf5-kservice-devel
+          - kcompletion-devel
+          - kconfig-devel
+          - ki18n-devel
+          - kio-devel
+          - kservice-devel
       Files:
           - "%{_kf5_includedir}/knotifyconfig_version.h"
           - "%{_kf5_includedir}/KNotifyConfig"
           - "%{_kf5_libdir}/libKF5NotifyConfig.so"
-          - "%{_kf5_libdir}/cmake/KF5NotifyConfig"
-          - "%{_datadir}/qt5/mkspecs/modules/*.pri"
+          - "%{_kf5_cmakedir}/KF5NotifyConfig"
+          - "%{_kf5_mkspecsdir}/*.pri"
